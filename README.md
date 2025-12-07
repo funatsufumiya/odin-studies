@@ -10,3 +10,7 @@ $ odin run hello
 
 # (then same as the rest of folders)
 ```
+
+## License
+
+0BSD / WTFPL
