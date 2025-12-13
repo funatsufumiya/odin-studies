@@ -1,5 +1,10 @@
 # Odin Studies
 
+## Pre-requisites
+
+- `shared:sokol`
+  - Please check [sokol/README.md](./sokol/README.md)
+
 ## Usage
 
 ```bash
