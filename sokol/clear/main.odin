@@ -1,11 +1,5 @@
 package main
 
-// import "core:fmt"
-
-// main :: proc() {
-//     fmt.printf("hello\n")
-// }
-
 import "core:fmt"
 import "base:runtime"
 import sapp "shared:sokol/app"
@@ -60,40 +54,6 @@ frame :: proc "c" (user_data: rawptr) {
     pass_action.colors[0].clear_value.g = g > 1.0 ? 0.0 : g
 
 	sg.begin_pass({ action = pass_action, swapchain = sglue.swapchain() })
-	// draw()
 	sg.end_pass()
 	sg.commit()
 }
-
-// draw :: proc "c" () {
-// 	context = runtime.default_context()
-
-// 	// first, reset and setup ortho projection
-// 	sgl.defaults()
-// 	sgl.matrix_mode_projection()
-// 	sgl.ortho(0.0, f32(sapp.width()), f32(sapp.height()), 0.0, -1.0, 1.0)
-// 	sgl.c4b(255, 0, 0, 128)
-// 	draw_hollow_rect(220, 140, 200, 200)
-// 	sgl.c4b(25, 150, 255, 128)
-// 	draw_filled_rect(270, 190, 100, 100)
-// 	// line(0, 0, 500, 500)
-// }
-
-// draw_hollow_rect :: proc(x: f32, y: f32, w: f32, h: f32) {
-// 	sgl.begin_line_strip()
-// 	sgl.v2f(x, y)
-// 	sgl.v2f(x + w, y)
-// 	sgl.v2f(x + w, y + h)
-// 	sgl.v2f(x, y + h)
-// 	sgl.v2f(x, y)
-// 	sgl.end()
-// }
-
-// draw_filled_rect :: proc(x: f32, y: f32, w: f32, h: f32) {
-// 	sgl.begin_quads()
-// 	sgl.v2f(x, y)
-// 	sgl.v2f(x + w, y)
-// 	sgl.v2f(x + w, y + h)
-// 	sgl.v2f(x, y + h)
-// 	sgl.end()
-// }
