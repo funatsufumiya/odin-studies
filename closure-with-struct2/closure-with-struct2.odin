@@ -9,10 +9,10 @@ A :: struct {
     fn: proc() -> int
 }
 
-self : ^A // workaround as self pointer
+self : ^A
 
 main :: proc() {
-    x : int = 7
+    x : int = 8
     a := A {
         &x, 
         proc() -> int {
